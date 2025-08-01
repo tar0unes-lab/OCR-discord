@@ -1,9 +1,15 @@
+# Exported from Render on 2025-08-01T03:17:41Z
 services:
-  - type: web
-    name: discord-ocr-bot
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    envVars:
-      - key: DISCORD_BOT_TOKEN
-        sync: false
+- type: web
+  name: OCR-discord
+  runtime: python
+  repo: https://github.com/tar0unes-lab/OCR-discord
+  plan: free
+  envVars:
+  - key: DISCORD_BOT_TOKEN
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python.py
+  autoDeployTrigger: commit
+version: "1"
