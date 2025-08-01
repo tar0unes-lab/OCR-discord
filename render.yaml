@@ -10,6 +10,6 @@ services:
     sync: false
   region: oregon
   buildCommand: pip install -r requirements.txt
-  startCommand: python.py
+  startCommand: python main.py
   autoDeployTrigger: commit
 version: "1"
