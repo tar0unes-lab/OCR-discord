@@ -1,6 +1,6 @@
 # Exported from Render on 2025-08-01T03:17:41Z
 services:
-- type: web
+- type: worker
   name: OCR-discord
   runtime: python
   repo: https://github.com/tar0unes-lab/OCR-discord
